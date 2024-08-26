@@ -124,16 +124,16 @@ export default function Component() {
           </div>
         </div>
 
-        {/* New section for recommendations */}
+        {/* Swapped sections */}
         <section className="mt-12">
           <div className="flex items-center mb-4">
-            <h2 className="text-xl font-bold mr-4">I highly recommended purchasing along with -</h2>
-            <div className="bg-gradient-to-r from-gumroad-pink-500 to-gumroad-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md transform -rotate-1">
-              <span className="text-white">Recommended</span>
+            <h2 className="text-xl font-bold mr-4">Mark Bier's top find on Gumroad!</h2>
+            <div className="bg-gradient-to-r from-gumroad-blue-600 to-gumroad-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md transform -rotate-2">
+              <span className="text-white">Top Pick</span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {recommendedWithPurchase.map((product, index) => (
+            {authorTopPicks.map((product, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col">
                 <img
                   src={product.image}
@@ -181,13 +181,13 @@ export default function Component() {
 
         <section className="mt-12">
           <div className="flex items-center mb-4">
-            <h2 className="text-xl font-bold mr-4">My top find from Gumroad!</h2>
-            <div className="bg-gradient-to-r from-gumroad-blue-600 to-gumroad-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md transform -rotate-2">
-              <span className="text-white">Top Pick</span>
+            <h2 className="text-xl font-bold mr-4">Mark Bier highly recommends purchasing along with -</h2>
+            <div className="bg-gradient-to-r from-gumroad-pink-500 to-gumroad-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-md transform -rotate-1">
+              <span className="text-white">Recommended</span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {authorTopPicks.map((product, index) => (
+            {recommendedWithPurchase.map((product, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col">
                 <img
                   src={product.image}
@@ -266,30 +266,6 @@ export default function Component() {
                   reviews: 20,
                   price: '$0+',
                   image: "https://picsum.photos/id/6/300/200",
-                },
-                {
-                  title: "Young Man's Simple Guide to Super-Health",
-                  author: 'Mark Baker',
-                  rating: 4.9,
-                  reviews: 12,
-                  price: '$0+',
-                  image: "https://picsum.photos/id/7/300/200",
-                },
-                {
-                  title: 'Physical Fitness & Longevity Tests',
-                  author: 'Mark Baker',
-                  rating: 5.0,
-                  reviews: 16,
-                  price: '$0+',
-                  image: "https://picsum.photos/id/8/300/200",
-                },
-                {
-                  title: 'Escaping Entrapment',
-                  author: 'Mark Baker',
-                  rating: 4.9,
-                  reviews: 29,
-                  price: '$0+',
-                  image: "https://picsum.photos/id/9/300/200",
                 },
               ].map((product, index) => (
                 <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col">
